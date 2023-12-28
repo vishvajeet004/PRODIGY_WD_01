@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 16px;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+
+    #navbar a:hover {
+      color: #ffcc00;
+    }
+
+    #section {
+      padding: 50px;
+      margin-top: 60px;
+      height: 1500px; /* Just to create some scrollable content */
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="section">
+  <!-- Your page content goes here -->
+</div>
+
+<script>
+  window.onscroll = function() {
+    var navbar = document.getElementById("navbar");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      navbar.style.backgroundColor = "#555";
+    } else {
+      navbar.style.backgroundColor = "#333";
+    }
+  };
+</script>
+
+</body>
+</html>
+
